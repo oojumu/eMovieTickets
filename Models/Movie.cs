@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -19,9 +20,16 @@ namespace eMovieTickets.Models
 
         public MovieCategory MovieCategory { get; set; }
 
-        //public int MyProperty { get; set; }
+        // Relationship
+        public List<Actor_Movie> Actor_Movies { get; set; }
 
-        //public int MyProperty { get; set; }
+        public int CinemaId { get; set; }
+        
+        [ForeignKey("CinemaId")]
+        public Cinema Cinema { get; set; }
+
+        public int ProducerId { get; set; }
+        public Producer Producer { get; set; }
 
 
 
