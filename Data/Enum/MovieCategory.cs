@@ -11,5 +11,7 @@ namespace eMovieTickets.Models
         Comedy,
         Drama,
         Documentary,
+        Cartoon,
+        Horror
     }
 }
